@@ -1,11 +1,10 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
 
-header {
-
-    a {
-        width: 0.8rem;
+main {
+    .jumbotron {
+        height: 250px;
+        background-image: url('../img/jumbotron.jpg');
+        background-size: cover;
+        background-attachment: fixed;
     }
-
 }
-
-;

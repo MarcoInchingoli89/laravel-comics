@@ -2,17 +2,14 @@
 
 @section('content')
     <div class="container-fluid bg-dark">
-
-        <section class="comics row row-cols-1 row-cols-md-3 g-4">
+        <div class="jumbotron"></div>
+        <section class="comics row row-cols-3 g-4 text-white text-center mt-3">
             @forelse($comics as $comicbook)
                 <div class="col">
-                    <div class="card">
-                        <img src="{{ $comicbook['thumb'] }}" alt="" class="card-img-top">
-                        <div class="card-body">
-                            <h4>{{ $comicbook['title'] }}</h4>
-                            <div class="price">{{ $comicbook['price'] }}</div>
-                        </div>
-                    </div>
+                    <img width="250" src="{{ $comicbook['thumb'] }}" alt="">
+                    <h5>{{ $comicbook['series'] }}</h5>
+                    <h5>{{ $comicbook['title'] }}</h5>
+                    <h5>{{ $comicbook['price'] }}</h5>
                 </div>
             @empty
                 <div class="col">
